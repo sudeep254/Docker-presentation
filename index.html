@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,14 +29,15 @@
         <section data-markdown>
         * open source container based technology
         * container allows developers to package up an application,all  the dependency that is required in the box
-        * Docker is  mainly created in Go.
+        * docker is written in Go.
         </section>
          <section data-markdown>
-    ## BENEFITS 
+    ## Benefits 
          * scalable
          * portable
-         * Deployment
+         * deployment
          * solves dependency problems
+         * uses less resources than a VM
 
          </section>
 
@@ -51,16 +50,14 @@
          ## Architecture in os x 
          ![](images/osx.png)
 
-         	</section>
-            
-         	<section data-markdown>
+       	</section>
+        <section data-markdown>
            ** CREATING THE FIRST CONTAINER **
            * The most common way to create a container is by using **_ docker run _** command.
            * for example :         
            **_ docker run ubuntu:14.04 echo "Hello docker" _**
            * similarly,we can create a interactive container by launching a bash shell inside it  
            **_ docker run ubuntu:14.04 /bin/bash _**
-
            </section>
   <section data-markdown>
            ** LISTING CONTAINER **
@@ -69,22 +66,13 @@
            * for showing all the running and the stopped container,we can use the -a attribute.
            * for example :         
            **_ docker ps -a _**
-           
-
            </section>
-
            <section data-markdown>
            ** STOPPING THE CONTAINER **
            * we can stop the  container using the following command.  
            *** docker stop __<__container__>__ ***
            * This will  stop   the specified running container.
-           
-
-           
-
            </section>
-
-
            <section data-markdown>
            ** STARTING THE  CONTAINER **
            * To re-execute the process of a stopped container we can use the following command.   
@@ -92,28 +80,18 @@
            * To attach to a running container we can use the following command.   
            **_docker attach __<__container__>___**
            </section>
-
-
            <section data-markdown>
            ** INSPECTING THE  CONTAINER **
            * To show very  detailed information,in JSON format , about container and its process execute     
            **_docker inspect __<__container__>___**   
            * Inspection is available in both stopped and running container
            </section>
-
-
-
            <section data-markdown>
            ** READING A CONTAINER'S OUTPUT **
            * Docker redirect's stdout and stderr of every container both to current terminal and Docker's internal logs
-
-
-
            **_docker logs __<__container__>___**   
            
            </section>
-
-
            <section data-markdown>
            ** REMOVING CONTAINERS **
            * To remove the stopped container we can use the following command.   
@@ -122,16 +100,11 @@
            * To delete all the stopped containers at once.   
            **_docker rm $(docker ps -aq)_**
            </section>
-
            <section data-markdown>
            ** LISTING IMAGES **
            * To list all the images execute.   
            **_docker images_**   
-           
            </section>
-
-
-
             <section data-markdown>
            ** REMOVING IMAGES **
            * To remove the selected image we can use the following command.   
@@ -139,43 +112,31 @@
            * To delete all the images at once,use   
            **_docker rmi $(docker ps -aq)_**
            </section>
-
-
             <section data-markdown>
            ** DISPLAYING RUNNING PROCESS IN THE CONTAINER **
            * For displaying the running processes of a container we can use the following command.   
            **_docker ps __<__container__>___**   
            </section>
-
-
            <section data-markdown>
            ** RENAMING THE CONTAINER **
            * To rename the container we can use the following command.   
            **_docker rename __<__oldname__>___  __<__newname__>__**   
            </section>
-
-
            <section data-markdown>
            ** LOGIN TO DOCKER REGISTRY **
            * Register or log in to a Docker registry server   
            **_docker login _**   
            </section>
-
-
             <section data-markdown>
            ** PULLING THE IMAGE **
            * To Pull an image or a repository from a Docker registry server use the following command.   
            **_docker pull __<__Name:Tag__>___**   
            </section>
-
-
-
             <section data-markdown>
            ** PUSHING THE IMAGE **
            * To push an image or a repository to the registry use the following command.   
            **_docker push __<__Name:Tag__>___**   
            </section>
-
            <section data-markdown>
            ** LOGOUT FROM DOCKER REGISTRY **
            * To logout from docker registry server   
@@ -188,31 +149,17 @@
             
             **_docker run -it  -v  __<__Hostpath__>___:__<__containerPath__>__ __<__BaseImage__>__ **
             </section>
-
-
-
-
             <section data-markdown>
            ** COMMIT **
            * Create a new image from a container's changes  
            **_docker commit [options] __<__CONTAINER__>___** [REPOSITORY[:TAG]]  
             </section>
-
-
-
-
- 
-
-
-
            <section data-markdown>
            ** CREATING THE IMAGE **
            * Docker images can be created in 2 different ways:
             * By editing the Dockerfile command in the hostfile system and executing the **_ docker build _** command
             * By working in the container and saving the changes by using **_docker commit_**  command  
            </section>
-
-
            <section data-markdown>
            ** BUILDING THE IMAGE VIA DOCKERFILE **
            * The steps are simplified and standard:
@@ -221,8 +168,6 @@
             * Run the following command to build image from the Dockerfile  
             **_docker build -t __<__ImageName:Tag__>___  __<__directory of Dockerfile__>__**
             </section>
-
-
             <section data-markdown>
            ** DOCKERFILE COMMANDS **  
 
@@ -238,28 +183,6 @@
             <section data-markdown>
             ![](images/docker_image.png)
         </section>
-
-
-
-         
-
-
-
-
-
-     
-
-    
-
-
-
-
-
-
-
-
-
-
     </div>
 </div>
 
