@@ -13,16 +13,15 @@
 	
 	<div class="reveal">
     <div class="slides">
-        <section data-markdown data-background="images/docker2.png">
-	        <script type="text/template">
-	        
-
-	        </script>
+        <section data-markdown>
+        ![](images/docker2.png)        
+        ### @SudeepParajuli
+        ###sudeep.parajuli254@gmail.com
         </section>
 
         <section data-markdown>
-            ![](images/comparision.png)
-        </section>
+            ![](images/comparision.png)  
+            </section>
         <section data-markdown>
             ## your VM is your pet , your containers are cattle !! 
         </section>
@@ -93,7 +92,16 @@
            ** READING A CONTAINER'S OUTPUT **
            * Docker redirect's stdout and stderr of every container both to current terminal and Docker's internal logs
            **_docker logs __<__container__>___**   
-           
+           </section>
+           <section data-markdown>
+           ** DISPLAYING RUNNING PROCESS IN THE CONTAINER **
+           * For displaying the running processes of a container we can use the following command.   
+           **_docker ps __<__container__>___**   
+           </section>
+           <section data-markdown>
+           ** RENAMING THE CONTAINER **
+           * To rename the container we can use the following command.   
+           **_docker rename __<__oldname__>___  __<__newname__>__**   
            </section>
            <section data-markdown>
            ** REMOVING CONTAINERS **
@@ -116,16 +124,6 @@
            **_docker rmi $(docker ps -aq)_**
            </section>
             <section data-markdown>
-           ** DISPLAYING RUNNING PROCESS IN THE CONTAINER **
-           * For displaying the running processes of a container we can use the following command.   
-           **_docker ps __<__container__>___**   
-           </section>
-           <section data-markdown>
-           ** RENAMING THE CONTAINER **
-           * To rename the container we can use the following command.   
-           **_docker rename __<__oldname__>___  __<__newname__>__**   
-           </section>
-           <section data-markdown>
            ** LOGIN TO DOCKER REGISTRY **
            * Register or log in to a Docker registry server   
            **_docker login _**   
@@ -185,7 +183,16 @@
 
             <section data-markdown>
             ![](images/docker_image.png)
-        </section>
+            </section>
+            <section data-markdown>
+           ** DOCKER COMPOSE **
+           * Compose is a tool for defining and running multi-container docker application.   
+           * With compose, we choose a compose file to configure our application's service. 
+           * Then using a single command we create and start all the services from our configuration. 
+           </section>
+
+
+
     </div>
 </div>
 
