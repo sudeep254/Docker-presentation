@@ -17,6 +17,7 @@
         ![](images/docker2.png)        
         ### @SudeepParajuli
         ###sudeep.parajuli254@gmail.com
+        ###SLW-YIPL (2015-12-23)
         </section>
 
         <section data-markdown>
@@ -35,11 +36,11 @@
         </section>
          <section data-markdown>
     ## Benefits 
-         * scalable
-         * portable
-         * deployment
-         * solves dependency problems
-         * uses less resources than a VM
+         * Scalable
+         * Isolation
+         * Lightweight
+         * Solves dependency problems
+         * Uses less resources than a VM
 
          </section>
 
@@ -57,9 +58,9 @@
            ** CREATING THE FIRST CONTAINER **
            * The most common way to create a container is by using **_ docker run _** command.
            * for example :         
-           **_ docker run ubuntu:14.04 echo "Hello docker" _**
+           **_ docker run  --name test ubuntu:14.04 echo hello world _**
            * similarly,we can create a interactive container by launching a bash shell inside it  
-           **_ docker run ubuntu:14.04 /bin/bash _**
+           **_ docker run -it --name test1 ubuntu:14.04 /bin/bash _**
            </section>
   <section data-markdown>
            ** LISTING CONTAINER **
@@ -90,13 +91,8 @@
            </section>
            <section data-markdown>
            ** READING A CONTAINER'S OUTPUT **
-           * Docker redirect's stdout and stderr of every container both to current terminal and Docker's internal logs
+           * Docker redirect's stdout and stderr of every container both to current terminal and Docker's internal logs  
            **_docker logs __<__container__>___**   
-           </section>
-           <section data-markdown>
-           ** DISPLAYING RUNNING PROCESS IN THE CONTAINER **
-           * For displaying the running processes of a container we can use the following command.   
-           **_docker ps __<__container__>___**   
            </section>
            <section data-markdown>
            ** RENAMING THE CONTAINER **
@@ -116,6 +112,12 @@
            * To list all the images execute.   
            **_docker images_**   
            </section>
+           <section data-markdown>
+           ** Docker EXEC command **
+           * Run a command in running container   
+           **_ docker exec __<__container__>__ __<__command__>___**
+           </section>
+
             <section data-markdown>
            ** REMOVING IMAGES **
            * To remove the selected image we can use the following command.   
@@ -191,7 +193,16 @@
            * Then using a single command we create and start all the services from our configuration. 
            </section>
 
-
+           <section data-markdown>
+           #Any Questions
+           </section>
+           <section data-markdown>
+            ![](images/dockergif.gif)  
+            </section>
+    
+         <section data-markdown>
+         #Thank you !!!!!
+         </section>
 
     </div>
 </div>
